@@ -8,11 +8,11 @@ Die Webkomponente realisiert ein input tag mit Button zur Sprachein- und ausgabe
 
 TODO: Describe the installation process
 
-## Usage
+## Verwendung
 
 TODO: Write usage instructions
 
-## Contributing
+## Mitarbeit
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -20,14 +20,21 @@ TODO: Write usage instructions
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
+## Releaselog
 
 Initiales Projektsetup basierend auf https://github.com/FunThomas424242/webspeech.example
 
-## Credits
+## Quellen
 
-TODO: Write credits
+* https://github.com/educastellano/qr-code
+* https://flaviocopes.com/es-modules/
+* https://www.cheatography.com/funthomas424242/cheat-sheets/webcomponents-native-javscript/
 
-## License
+
+## Garantien
+
+Keine Garantien
+
+## Lizenz
 
 MIT License
