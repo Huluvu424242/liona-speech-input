@@ -22,7 +22,7 @@ TODO: Write usage instructions
 
 ## History
 
-Initiales Projektsetup
+Initiales Projektsetup basierend auf https://github.com/FunThomas424242/webspeech.example
 
 ## Credits
 
