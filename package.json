@@ -1,0 +1,44 @@
+{
+  "name": "liona-speech-input",
+  "version": "1.0.5",
+  "description": "Web Component for speech input field",
+  "main": "dist/index.bundle.js",
+  "scripts": {
+    "start": "concurrently \"npm run start-watch\" \"npm run start-server\" ",
+    "start-watch": "webpack --watch",
+    "start-server": "http-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "npm run build && git add dist",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FunThomas424242/liona-speech-input.git"
+  },
+  "keywords": [
+    "speech",
+    "speech-input",
+    "speech-output",
+    "webcomponent",
+    "custom-element"
+  ],
+  "author": "FunThomas424242 alias Huluvu424242 (Thomas Schubert)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FunThomas424242/liona-speech-input/issues"
+  },
+  "homepage": "https://github.com/FunThomas424242/liona-speech-input",
+  "dependencies": {
+    "qrjs": "^0.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "http-server": "^0.11.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
