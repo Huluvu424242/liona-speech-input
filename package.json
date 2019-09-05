@@ -4,7 +4,7 @@
   "description": "Web Component for speech input field",
   "main": "dist/index.bundle.js",
   "scripts": {
-    "clean": "rm -rf ./dist/*",
+    "clean": "rm -rf ./docs/bundle.js",
     "start": "concurrently \"npm run start-watch\" \"npm run start-server\" ",
     "start-watch": "webpack -d --watch",
     "start-server": "webpack-dev-server",
