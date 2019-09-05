@@ -9,10 +9,10 @@ template.innerHTML = `
          
      </style>
     <div>
-      <label for="suchfeld">Suchbegriffe:</label>
-      <input id="suchfeld">
-      <button onclick="erkenneSprachEingabe()"><em>Freie Spracheingabe starten ...</em></button>
-      <button onclick="suchkriterienVorlesen()"><em>Suchkriterien vorlesen</em></button>
+      <label for="eingabefeld">Suchbegriffe:</label>
+      <input id="eingabefeld">
+      <button id="microphon-button"><em>Freie Spracheingabe starten ...</em></button>
+      <button id="reader-button"><em>Suchkriterien vorlesen</em></button>
     </div>
 `;
 
@@ -46,12 +46,18 @@ class LionaSpeechInput extends HTMLElement {
             // this.toggledContent = options.toggledContent;
 
 
-            // onClick auf Button definieren
-            // this.inputfield = this.shadowRoot.getElementById('suchfeld');
-            // this.inputfield.innerHTML = this.content;
-            // this.inputfield.addEventListener('click', () => {
-            //     this.toggled = !this.toggled;
-            // });
+            // onClick auf Micro Button definieren
+            this.eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
+            this.microphonButton = this.shadowRoot.getElementById('microphon-button');
+            this.microphonButton.addEventListener('click', () => {
+                console.log('### eingabeValue:'+this.eingabeFeld.value);
+                erkenneSprachEingabe(suchkriterienVorlesen, this.eingabeFeld);
+            });
+            // onClick auf Reader Button definieren
+            this.microphonButton = this.shadowRoot.getElementById('reader-button');
+            this.microphonButton.addEventListener('click', () => {
+                suchkriterienVorlesen(this.eingabeFeld.value);
+            });
         }
     }
 
