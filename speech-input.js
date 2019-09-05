@@ -1,8 +1,10 @@
+'use strict';
+
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-function erkenneSprachEingabe( words){
+const erkenneSprachEingabe = (words) => {
 
     // Spracherkennung konfigurieren
     var recognition = new SpeechRecognition();
@@ -11,7 +13,7 @@ function erkenneSprachEingabe( words){
     recognition.maxAlternatives = 1;
 
     // Grammatik initialisieren
-    if( words){
+    if (words) {
 
         var speechRecognitionList = new SpeechGrammarList();
         var grammar = '#JSGF V1.0; grammar words; public <word> = ' + words.join(' | ') + ' ;'
@@ -25,7 +27,7 @@ function erkenneSprachEingabe( words){
 
     // Callbacks implementieren
 
-    recognition.onresult = function(event) {
+    recognition.onresult = function (event) {
         // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
         // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
         // It has a getter so it can be accessed like an array
@@ -40,8 +42,11 @@ function erkenneSprachEingabe( words){
         suchkriterienVorlesen();
     }
 
-    recognition.onspeechend = function() {
+    recognition.onspeechend = function () {
         recognition.stop();
     }
 
+
 }
+
+export {erkenneSprachEingabe};
