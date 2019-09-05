@@ -47,16 +47,17 @@ class LionaSpeechInput extends HTMLElement {
 
 
             // onClick auf Micro Button definieren
-            this.eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
             this.microphonButton = this.shadowRoot.getElementById('microphon-button');
             this.microphonButton.addEventListener('click', () => {
-                console.log('### eingabeValue:'+this.eingabeFeld.value);
-                erkenneSprachEingabe(suchkriterienVorlesen, this.eingabeFeld);
+                const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
+                console.log('### eingabeValue:'+ eingabeFeld.value);
+                erkenneSprachEingabe(suchkriterienVorlesen, eingabeFeld);
             });
             // onClick auf Reader Button definieren
             this.microphonButton = this.shadowRoot.getElementById('reader-button');
             this.microphonButton.addEventListener('click', () => {
-                suchkriterienVorlesen(this.eingabeFeld.value);
+                const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
+                suchkriterienVorlesen( eingabeFeld.value);
             });
         }
     }
