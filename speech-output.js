@@ -1,15 +1,14 @@
 'use strict';
 
 var synthese = window.speechSynthesis;
-var suchfeld = document.querySelector('#suchfeld');
 
-const suchkriterienVorlesen = () => {
+const suchkriterienVorlesen = ( zuLesenderText) => {
     if (synthese.speaking) {
         console.error('Spricht bereits');
         return;
     }
-    if (suchfeld.value !== '') {
-        var vorleseText = 'Ihre Eingaben zur Kontrolle: ' + suchfeld.value;
+    if (zuLesenderText !== '') {
+        var vorleseText = 'Ihre Eingaben zur Kontrolle: ' + zuLesenderText;
         console.log("Text:" + vorleseText);
         var leserStimmeMitText = new SpeechSynthesisUtterance(vorleseText);
         leserStimmeMitText.onend = function (event) {
