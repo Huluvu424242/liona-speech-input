@@ -4,7 +4,7 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-const erkenneSprachEingabe = (words) => {
+const erkenneSprachEingabe = (callback, eingabeFeld, words) => {
 
     // Spracherkennung konfigurieren
     var recognition = new SpeechRecognition();
@@ -37,9 +37,10 @@ const erkenneSprachEingabe = (words) => {
         // The second [0] returns the SpeechRecognitionAlternative at position 0.
         // We then return the transcript property of the SpeechRecognitionAlternative object
         var speechResult = event.results[0][0].transcript; //.toLowerCase();
-        document.querySelector('#suchfeld').value = speechResult;
+        eingabeFeld.value = speechResult;
         console.log('Confidence: ' + event.results[0][0].confidence);
-        suchkriterienVorlesen();
+        console.log('### eingabeValue2:' + eingabeFeld.value);
+        callback(speechResult);
     }
 
     recognition.onspeechend = function () {
