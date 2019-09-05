@@ -5,7 +5,7 @@
   "main": "dist/index.bundle.js",
   "scripts": {
     "start": "concurrently \"npm run start-watch\" \"npm run start-server\" ",
-    "start-watch": "webpack --watch",
+    "start-watch": "webpack -d --watch",
     "start-server": "http-server",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/FunThomas424242/liona-speech-input",
   "dependencies": {
-    "qrjs": "^0.1.2"
+    "qrjs": "0.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "babel-loader": "^8.0.5",
-    "concurrently": "^4.1.0",
-    "http-server": "^0.11.1",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "babel-loader": "8.0.6",
+    "concurrently": "4.1.2",
+    "http-server": "0.11.1",
+    "webpack": "4.39.2",
+    "webpack-cli": "3.3.8"
   }
 }
