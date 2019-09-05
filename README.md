@@ -26,6 +26,7 @@ Initiales Projektsetup basierend auf https://github.com/FunThomas424242/webspeec
 
 ## Quellen
 
+* https://medium.com/@svinkle/getting-started-with-webpack-and-es6-modules-c465d053d988
 * https://github.com/educastellano/qr-code
 * https://flaviocopes.com/es-modules/
 * https://www.cheatography.com/funthomas424242/cheat-sheets/webcomponents-native-javscript/
