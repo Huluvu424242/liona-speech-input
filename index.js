@@ -1,3 +1,3 @@
-import LionaSpeechInput from './liona-speech-input'
+import {LionaSpeechInput} from './liona-speech-input'
 
-customElements.define('liona-speech-input', LionaSpeechInput)
+customElements.define('liona-speech-input', LionaSpeechInput);
