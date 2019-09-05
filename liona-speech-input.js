@@ -54,8 +54,8 @@ class LionaSpeechInput extends HTMLElement {
                 erkenneSprachEingabe(suchkriterienVorlesen, eingabeFeld);
             });
             // onClick auf Reader Button definieren
-            this.microphonButton = this.shadowRoot.getElementById('reader-button');
-            this.microphonButton.addEventListener('click', () => {
+            this.readerButton = this.shadowRoot.getElementById('reader-button');
+            this.readerButton.addEventListener('click', () => {
                 const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
                 suchkriterienVorlesen( eingabeFeld.value);
             });
