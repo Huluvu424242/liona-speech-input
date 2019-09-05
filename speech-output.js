@@ -18,7 +18,7 @@ const suchkriterienVorlesen = ( zuLesenderText) => {
             console.error('Fehler beim Vorlesen');
         }
         var voices = synthese.getVoices();
-        for (i = 0; i < voices.length; i++) {
+        for (var i = 0; i < voices.length; i++) {
             if (voices[i].default) {
                 console.log("Voice:" + voices[i].name + voices[i].lang);
                 leserStimmeMitText.voice = voices[i];
