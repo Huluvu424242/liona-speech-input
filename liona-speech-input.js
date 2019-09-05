@@ -1,5 +1,8 @@
 'use strict';
 
+import {erkenneSprachEingabe} from './speech-input';
+import {suchkriterienVorlesen} from './speech-output';
+
 const template = document.createElement('template');
 template.innerHTML = `
      <style>
@@ -8,14 +11,13 @@ template.innerHTML = `
     <div>
       <label for="suchfeld">Suchbegriffe:</label>
       <input id="suchfeld">
-<!--      <button onclick="erkenneSprachEingabe()"><em>Freie Spracheingabe starten ...</em></button>-->
-<!--      <button onclick="erkenneSprachEingabe(['Nürnberg Mittelfranken', 'Elektrofacharbeiter'])"><em>Spracheingabe mit Wortliste starten ...</em></button>-->
-<!--      <button onclick="suchkriterienVorlesen()"><em>Suchkriterien vorlesen</em></button>-->
+      <button onclick="erkenneSprachEingabe()"><em>Freie Spracheingabe starten ...</em></button>
+      <button onclick="suchkriterienVorlesen()"><em>Suchkriterien vorlesen</em></button>
     </div>
 `;
 
 
-export class LionaSpeechInput extends HTMLElement {
+class LionaSpeechInput extends HTMLElement {
 
     constructor() {
         super();  // immer zuerst aufrufen
@@ -92,6 +94,8 @@ export class LionaSpeechInput extends HTMLElement {
 
 
 };
+
+export {LionaSpeechInput}
 
 
 
