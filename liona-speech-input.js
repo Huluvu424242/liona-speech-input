@@ -1,7 +1,7 @@
 'use strict';
 
-import {erkenneSprachEingabe} from './speech-input';
-import {suchkriterienVorlesen} from './speech-output';
+import {Spracheingabe} from './speech-input';
+import {Sprachausgabe} from './speech-output';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -34,33 +34,37 @@ class LionaSpeechInput extends HTMLElement {
         console.debug('custom element is on the page!');
 
         this.erzeugeShadowDOMIfNotExists();
+        this.initialisiereShadowDOM();
     }
 
     erzeugeShadowDOMIfNotExists() {
         if (!this.shadowRoot) {
             console.debug('creating shadow dom');
             this.attachShadow({mode: 'open'});
-            this.shadowRoot.appendChild(template.content.cloneNode(true));
-            // const options = JSON.parse(this.getAttribute('options'));
-            // this.content = options.content;
-            // this.toggledContent = options.toggledContent;
-
-
-            // onClick auf Micro Button definieren
-            this.microphonButton = this.shadowRoot.getElementById('microphon-button');
-            this.microphonButton.addEventListener('click', () => {
-                const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
-                console.log('### eingabeValue:'+ eingabeFeld.value);
-                erkenneSprachEingabe(suchkriterienVorlesen, eingabeFeld);
-            });
-            // onClick auf Reader Button definieren
-            this.readerButton = this.shadowRoot.getElementById('reader-button');
-            this.readerButton.addEventListener('click', () => {
-                const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
-                suchkriterienVorlesen( eingabeFeld.value);
-            });
         }
     }
+
+    initialisiereShadowDOM() {
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+        var eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
+        var spracheingabe = new Spracheingabe(eingabeFeld);
+        var sprachausgabe = new Sprachausgabe(eingabeFeld);
+
+        // onClick auf Micro Button definieren
+        this.microphonButton = this.shadowRoot.getElementById('microphon-button');
+        this.microphonButton.addEventListener('click', () => {
+            spracheingabe.erkenneSprachEingabe(
+                sprachausgabe.suchkriterienVorlesen
+            );
+        });
+        // onClick auf Reader Button definieren
+        this.readerButton = this.shadowRoot.getElementById('reader-button');
+        this.readerButton.addEventListener('click', () => {
+            sprachausgabe.suchkriterienVorlesen();
+        });
+    }
+
 
     disconnectedCallback() {
         console.debug('element has been removed');
@@ -81,23 +85,23 @@ class LionaSpeechInput extends HTMLElement {
     }
 
 
-    // static get observedAttributes() {
-    //     return ['toggled'];
-    // }
+// static get observedAttributes() {
+//     return ['toggled'];
+// }
 
 
-    // get toggled() {
-    //     return this.getAttribute('toggled') === 'true';
-    // }
-    //
-    // // the second argument for setAttribute is mandatory, so we’ll use an empty string
-    // set toggled(val) {
-    //     if (val) {
-    //         this.setAttribute('toggled', true);
-    //     } else {
-    //         this.setAttribute('toggled', false);
-    //     }
-    // }
+// get toggled() {
+//     return this.getAttribute('toggled') === 'true';
+// }
+//
+// // the second argument for setAttribute is mandatory, so we’ll use an empty string
+// set toggled(val) {
+//     if (val) {
+//         this.setAttribute('toggled', true);
+//     } else {
+//         this.setAttribute('toggled', false);
+//     }
+// }
 
 
 };
