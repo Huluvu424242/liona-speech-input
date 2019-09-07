@@ -31,7 +31,7 @@ class Spracheingabe {
         sprachErkennung.lang = 'de-DE';
         sprachErkennung.interimResults = false;
         SpeechRecognition.continuous = false;
-        sprachErkennung.maxAlternatives = 1;
+        sprachErkennung.maxAlternatives = 2;
 
         return sprachErkennung;
     }

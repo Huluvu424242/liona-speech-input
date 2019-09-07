@@ -28,9 +28,9 @@ class LionaSpeechInput extends HTMLElement {
     }
 
     connectedCallback() {
-        Logger.logMessage('custom element is on the page!1');
+        Logger.logMessage('custom element in Seite eingehängt');
         this.erzeugeShadowDOMIfNotExists();
-        Logger.logMessage('custom element is on the page!2');
+        Logger.logMessage('ShadowDom befüllt');
     }
 
     disconnectedCallback() {
