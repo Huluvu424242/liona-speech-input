@@ -56,8 +56,9 @@ class LionaSpeechInput extends HTMLElement {
         // onClick auf Micro Button definieren
         this.microphonButton = this.shadowRoot.getElementById('microphon-button');
         this.microphonButton.addEventListener('click', () => {
-            spracheingabe.erkenneSprachEingabe(
-                sprachausgabe.suchkriterienVorlesen
+            spracheingabe.erkenneSprachEingabe( ( text )=> {
+                    sprachausgabe.suchkriterienVorlesen(text);
+                }
             );
         });
         // onClick auf Reader Button definieren

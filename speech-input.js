@@ -4,11 +4,13 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
+var eingabefeld;
+
 class Spracheingabe {
 
     constructor(eingabeFeldRef) {
-        this.eingabeFeld = eingabeFeldRef;
-        this.logMessage('####eingabe feld:' + this.eingabeFeld.outerHTML);
+        eingabefeld = eingabeFeldRef;
+        this.logMessage('####eingabe feld:' + eingabefeld.outerHTML);
     }
 
     erkenneSprachEingabe(callback, words) {
@@ -32,9 +34,7 @@ class Spracheingabe {
         this.logMessage('###speaker:'+recognition);
 
         // Callbacks implementieren
-        this.logMessage('####bevor this.eingabefeld:' + this.eingabeFeld.outerHTML);
-        var eingabefeld = this.eingabeFeld;
-        this.logMessage('####bevor eingabefeld:' + eingabefeld.outerHTML);
+        this.logMessage('####bevor this.eingabefeld:' + eingabefeld.outerHTML);
         var objekt = this;
         recognition.onresult = function (event) {
             objekt.logMessage('####eingabefeld:' + eingabefeld.outerHTML);
@@ -42,7 +42,7 @@ class Spracheingabe {
             eingabefeld.value = speechResult;
             objekt.logMessage('####eingabefeld changed:' + eingabefeld.outerHTML);
             objekt.logMessage('Confidence: ' + event.results[0][0].confidence);
-            // callback(speechResult);
+            callback(speechResult);
         }
 
         recognition.onspeechend = function () {
