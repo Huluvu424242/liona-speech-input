@@ -24,7 +24,7 @@ class Spracheingabe {
         // Grammatik initialisieren
         if (this.words) {
             const speechRecognitionList = new SpeechGrammarList();
-            const grammar = '#JSGF V1.0; grammar words; public <word> = ' + this.words.join(' | ') + ' ;';
+            const grammar = '#JSGF V1.0; grammar words; public <word> = ' + wortliste +' ;';
             speechRecognitionList.addFromString(grammar, 1);
             sprachErkennung.grammars = speechRecognitionList;
         }

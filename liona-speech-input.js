@@ -1,5 +1,6 @@
 'use strict';
 
+import {Logger} from './log-helper';
 import {Spracheingabe} from './speech-input';
 import {Sprachausgabe} from './speech-output';
 
@@ -23,40 +24,40 @@ class LionaSpeechInput extends HTMLElement {
         super();  // immer zuerst aufrufen
         // for init attribut defaults
         // e.g. this.src = '';
-        this.logMessage('constructor called');
+        Logger.logMessage('constructor called');
     }
 
     connectedCallback() {
-        this.logMessage('custom element is on the page!1');
+        Logger.logMessage('custom element is on the page!1');
         this.erzeugeShadowDOMIfNotExists();
-        this.logMessage('custom element is on the page!2');
+        Logger.logMessage('custom element is on the page!2');
     }
 
     disconnectedCallback() {
-        this.logMessage('element has been removed');
+        Logger.logMessage('element has been removed');
     }
 
     attributeChangedCallback(name, oldval, newval) {
         // do something every time the attribute changes
-        this.logMessage(`the ${name} attribute has changed from ${oldval} to ${newval}!!`);
+        Logger.logMessage(`the ${name} attribute has changed from ${oldval} to ${newval}!!`);
     }
 
     erzeugeShadowDOMIfNotExists() {
         if (!this.shadowRoot) {
-            this.logMessage('creating shadow dom');
+            Logger.logMessage('creating shadow dom');
             this.attachShadow({mode: 'open'});
         }
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
-        this.logMessage('##feld'+eingabeFeld.outerHTML);
-        const spracheingabe = new Spracheingabe(this.shadowRoot,'eingabefeld');
+        Logger.logMessage('##feld' + eingabeFeld.outerHTML);
+        const spracheingabe = new Spracheingabe(this.shadowRoot, 'eingabefeld');
         const sprachausgabe = new Sprachausgabe(eingabeFeld);
 
         // onClick auf Micro Button definieren
         this.microphonButton = this.shadowRoot.getElementById('microphon-button');
         this.microphonButton.addEventListener('click', () => {
-            spracheingabe.erkenneSprachEingabe( ( text )=> {
+            spracheingabe.erkenneSprachEingabe((text) => {
                     sprachausgabe.suchkriterienVorlesen(text);
                 }
             );
@@ -68,9 +69,6 @@ class LionaSpeechInput extends HTMLElement {
         });
     }
 
-    logMessage(message) {
-        console.log(message);
-    }
 
 // static get observedAttributes() {
 //     return ['toggled'];
@@ -91,7 +89,7 @@ class LionaSpeechInput extends HTMLElement {
 // }
 
 
-};
+}
 
 export {LionaSpeechInput}
 
