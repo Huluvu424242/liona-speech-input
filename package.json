@@ -3,6 +3,9 @@
   "version": "1.0.5",
   "description": "Web Component for speech input field",
   "main": "dist/index.bundle.js",
+  "engines": {
+    "node": "10.15.3"
+  },
   "scripts": {
     "clean": "rm -rf ./docs/bundle.js",
     "start": "concurrently \"npm run start-watch\" \"npm run start-server\" ",
