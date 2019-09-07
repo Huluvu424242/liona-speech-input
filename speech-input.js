@@ -6,8 +6,9 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 
 class Spracheingabe {
 
-    constructor(eingabeFeld) {
-        this.eingabeFeld = eingabeFeld;
+    constructor(eingabeFeldRef) {
+        this.eingabeFeld = eingabeFeldRef;
+        this.logMessage('####eingabe feld:' + this.eingabeFeld.outerHTML);
     }
 
     erkenneSprachEingabe(callback, words) {
@@ -28,13 +29,20 @@ class Spracheingabe {
 
         // Spracherkennung starten
         recognition.start();
+        this.logMessage('###speaker:'+recognition);
 
         // Callbacks implementieren
+        this.logMessage('####bevor this.eingabefeld:' + this.eingabeFeld.outerHTML);
+        var eingabefeld = this.eingabeFeld;
+        this.logMessage('####bevor eingabefeld:' + eingabefeld.outerHTML);
+        var objekt = this;
         recognition.onresult = function (event) {
+            objekt.logMessage('####eingabefeld:' + eingabefeld.outerHTML);
             var speechResult = event.results[0][0].transcript;
-            this.eingabeFeld.value = speechResult;
-            console.log('Confidence: ' + event.results[0][0].confidence);
-            callback(speechResult);
+            eingabefeld.value = speechResult;
+            objekt.logMessage('####eingabefeld changed:' + eingabefeld.outerHTML);
+            objekt.logMessage('Confidence: ' + event.results[0][0].confidence);
+            // callback(speechResult);
         }
 
         recognition.onspeechend = function () {
@@ -43,6 +51,10 @@ class Spracheingabe {
 
 
     }
-}
+
+    logMessage(message) {
+        console.log(message);
+    }
+};
 
 export {Spracheingabe};

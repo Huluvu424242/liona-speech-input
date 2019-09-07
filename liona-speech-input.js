@@ -21,35 +21,37 @@ class LionaSpeechInput extends HTMLElement {
 
     constructor() {
         super();  // immer zuerst aufrufen
-        // this.toggled = this.getAttribute('toggled') === "true" || false;
-        // const options = this.getAttribute('options');
-        // console.debug('constructor called with options: ' + JSON.stringify(options));
-        console.debug('constructor called with options: ');
-
         // for init attribut defaults
         // e.g. this.src = '';
+        this.logMessage('constructor called');
     }
 
     connectedCallback() {
-        console.debug('custom element is on the page!');
-
+        this.logMessage('custom element is on the page!1');
         this.erzeugeShadowDOMIfNotExists();
-        this.initialisiereShadowDOM();
+        this.logMessage('custom element is on the page!2');
+    }
+
+    disconnectedCallback() {
+        this.logMessage('element has been removed');
+    }
+
+    attributeChangedCallback(name, oldval, newval) {
+        // do something every time the attribute changes
+        this.logMessage(`the ${name} attribute has changed from ${oldval} to ${newval}!!`);
     }
 
     erzeugeShadowDOMIfNotExists() {
         if (!this.shadowRoot) {
-            console.debug('creating shadow dom');
+            this.logMessage('creating shadow dom');
             this.attachShadow({mode: 'open'});
         }
-    }
-
-    initialisiereShadowDOM() {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-        var eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
-        var spracheingabe = new Spracheingabe(eingabeFeld);
-        var sprachausgabe = new Sprachausgabe(eingabeFeld);
+        const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
+        this.logMessage('##feld'+eingabeFeld.outerHTML);
+        const spracheingabe = new Spracheingabe(eingabeFeld);
+        const sprachausgabe = new Sprachausgabe(eingabeFeld);
 
         // onClick auf Micro Button definieren
         this.microphonButton = this.shadowRoot.getElementById('microphon-button');
@@ -65,25 +67,9 @@ class LionaSpeechInput extends HTMLElement {
         });
     }
 
-
-    disconnectedCallback() {
-        console.debug('element has been removed');
+    logMessage(message) {
+        console.log(message);
     }
-
-    attributeChangedCallback(name, oldval, newval) {
-        // do something every time the attribute changes
-
-        console.debug(`the ${name} attribute has changed from ${oldval} to ${newval}!!`);
-
-        this.erzeugeShadowDOMIfNotExists();
-
-        // if (this.toggled) {
-        //     this.inputfield.innerHTML = this.toggledContent;
-        // } else {
-        //     this.inputfield.innerHTML = this.content;
-        // }
-    }
-
 
 // static get observedAttributes() {
 //     return ['toggled'];

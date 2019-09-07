@@ -4,30 +4,33 @@ var synthese = window.speechSynthesis;
 
 class Sprachausgabe {
 
-    constructor( eingabeFeld ) {
-        this.eingabeFeld = eingabeFeld;
+    constructor(eingabeFeldRef) {
+        this.eingabeFeld = eingabeFeldRef;
+        this.logMessage('####ausgabe feld:'+this.eingabeFeld.outerHTML);
     }
 
     suchkriterienVorlesen() {
         if (synthese.speaking) {
-            console.error('Spricht bereits');
+            this.logMessage('Spricht bereits');
             return;
         }
         var zuLesenderText = this.eingabeFeld.value;
+        this.logMessage('###'+this.eingabeFeld.value);
         if (zuLesenderText !== '') {
             var vorleseText = 'Ihre Eingaben zur Kontrolle: ' + zuLesenderText;
-            console.log("Text:" + vorleseText);
+            this.logMessage("Text:" + vorleseText);
             var leserStimmeMitText = new SpeechSynthesisUtterance(vorleseText);
+            var objekt = this;
             leserStimmeMitText.onend = function (event) {
-                console.log('Vorlesen beendet');
+                objekt.logMessage('Vorlesen beendet');
             }
             leserStimmeMitText.onerror = function (event) {
-                console.error('Fehler beim Vorlesen');
+                objekt.logMessage('Fehler beim Vorlesen');
             }
             var voices = synthese.getVoices();
             for (var i = 0; i < voices.length; i++) {
                 if (voices[i].default) {
-                    console.log("Voice:" + voices[i].name + voices[i].lang);
+                    this.logMessage("Voice:" + voices[i].name + voices[i].lang);
                     leserStimmeMitText.voice = voices[i];
                     break;
                 }
@@ -37,6 +40,10 @@ class Sprachausgabe {
             leserStimmeMitText.volume = 1;
             synthese.speak(leserStimmeMitText);
         }
+    }
+
+    logMessage(message) {
+        console.log(message);
     }
 };
 
