@@ -31,6 +31,7 @@ Initiales Projektsetup basierend auf https://github.com/FunThomas424242/webspeec
 * https://flaviocopes.com/es-modules/
 * https://www.sitepoint.com/understanding-es6-modules/
 * https://www.cheatography.com/funthomas424242/cheat-sheets/webcomponents-native-javscript/
+* https://dev.to/bennypowers/lets-build-web-components-part-3-vanilla-components-4on3
 
 
 ## Garantien
