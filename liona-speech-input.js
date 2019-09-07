@@ -50,7 +50,7 @@ class LionaSpeechInput extends HTMLElement {
 
         const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
         this.logMessage('##feld'+eingabeFeld.outerHTML);
-        const spracheingabe = new Spracheingabe(eingabeFeld);
+        const spracheingabe = new Spracheingabe(this.shadowRoot,'eingabefeld');
         const sprachausgabe = new Sprachausgabe(eingabeFeld);
 
         // onClick auf Micro Button definieren

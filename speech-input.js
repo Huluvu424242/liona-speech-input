@@ -4,13 +4,16 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-var eingabefeld;
+var shadowRoot;
+var eingabeFeldId;
 
 class Spracheingabe {
 
-    constructor(eingabeFeldRef) {
-        eingabefeld = eingabeFeldRef;
-        this.logMessage('####eingabe feld:' + eingabefeld.outerHTML);
+    constructor(shadowRootRef, inputFieldIdRef) {
+        shadowRoot = shadowRootRef;
+        eingabeFeldId = inputFieldIdRef;
+        this.logMessage('####shadow root:' + shadowRoot);
+        this.logMessage('####eingabe feld id:' + eingabeFeldId);
     }
 
     erkenneSprachEingabe(callback, words) {
@@ -34,13 +37,14 @@ class Spracheingabe {
         this.logMessage('###speaker:'+recognition);
 
         // Callbacks implementieren
-        this.logMessage('####bevor this.eingabefeld:' + eingabefeld.outerHTML);
+        var eingabeFeld = shadowRoot.getElementById(eingabeFeldId);
+        this.logMessage('####bevor this.eingabefeld:' + eingabeFeld.outerHTML);
         var objekt = this;
         recognition.onresult = function (event) {
-            objekt.logMessage('####eingabefeld:' + eingabefeld.outerHTML);
+            objekt.logMessage('####eingabefeld:' + eingabeFeld.outerHTML);
             var speechResult = event.results[0][0].transcript;
-            eingabefeld.value = speechResult;
-            objekt.logMessage('####eingabefeld changed:' + eingabefeld.outerHTML);
+            eingabeFeld.value = speechResult;
+            objekt.logMessage('####eingabefeld changed:' + eingabeFeld.outerHTML);
             objekt.logMessage('Confidence: ' + event.results[0][0].confidence);
             callback(speechResult);
         }
