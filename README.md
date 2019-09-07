@@ -27,6 +27,7 @@ TODO: Write usage instructions
 ```html
 <liona-speech-input></liona-speech-input>
 ```
+Zur [Live-Demo](https://funthomas424242.github.io/liona-speech-input/)
 
 
 ## Mitarbeit
