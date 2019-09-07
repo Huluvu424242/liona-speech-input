@@ -63,3 +63,4 @@ typings/
 # IDEA
 /.idea
 
+/dist/bundle.js
