@@ -81,69 +81,366 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./app.js":
-/*!****************!*\
-  !*** ./app.js ***!
-  \****************/
-/*! no exports provided */
+/******/ ([
+/* 0 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _liona_speech_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./liona-speech-input */ \"./liona-speech-input.js\");\n\ncustomElements.define('liona-speech-input', _liona_speech_input__WEBPACK_IMPORTED_MODULE_0__[\"LionaSpeechInput\"]);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hcHAuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAuanM/OWE3OCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0xpb25hU3BlZWNoSW5wdXR9IGZyb20gJy4vbGlvbmEtc3BlZWNoLWlucHV0J1xuXG5jdXN0b21FbGVtZW50cy5kZWZpbmUoJ2xpb25hLXNwZWVjaC1pbnB1dCcsIExpb25hU3BlZWNoSW5wdXQpO1xuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFFQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./app.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _liona_speech_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+customElements.define('liona-speech-input', _liona_speech_input__WEBPACK_IMPORTED_MODULE_0__["LionaSpeechInput"]);
 
 /***/ }),
-
-/***/ "./liona-speech-input.js":
-/*!*******************************!*\
-  !*** ./liona-speech-input.js ***!
-  \*******************************/
-/*! exports provided: LionaSpeechInput */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LionaSpeechInput\", function() { return LionaSpeechInput; });\n/* harmony import */ var _log_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./log-helper */ \"./log-helper.js\");\n/* harmony import */ var _speech_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./speech-input */ \"./speech-input.js\");\n/* harmony import */ var _speech_output__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./speech-output */ \"./speech-output.js\");\n\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _wrapNativeSuper(Class) { var _cache = typeof Map === \"function\" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== \"function\") { throw new TypeError(\"Super expression must either be null or a function\"); } if (typeof _cache !== \"undefined\") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }\n\nfunction isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _construct(Parent, args, Class) { if (isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }\n\nfunction _isNativeFunction(fn) { return Function.toString.call(fn).indexOf(\"[native code]\") !== -1; }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\n\n\n\nvar template = document.createElement('template');\ntemplate.innerHTML = \"\\n     <style>\\n         \\n     </style>\\n    <div>\\n      <label for=\\\"eingabefeld\\\">Suchbegriffe:</label>\\n      <input id=\\\"eingabefeld\\\">\\n      <button id=\\\"microphon-button\\\"><em>Freie Spracheingabe starten ...</em></button>\\n      <button id=\\\"reader-button\\\"><em>Suchkriterien vorlesen</em></button>\\n    </div>\\n\";\n\nvar LionaSpeechInput =\n/*#__PURE__*/\nfunction (_HTMLElement) {\n  _inherits(LionaSpeechInput, _HTMLElement);\n\n  function LionaSpeechInput() {\n    var _this;\n\n    _classCallCheck(this, LionaSpeechInput);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(LionaSpeechInput).call(this)); // immer zuerst aufrufen\n    // for init attribut defaults\n    // e.g. this.src = '';\n\n    _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('constructor called');\n    return _this;\n  }\n\n  _createClass(LionaSpeechInput, [{\n    key: \"connectedCallback\",\n    value: function connectedCallback() {\n      _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('custom element in Seite eingehängt');\n      this.erzeugeShadowDOMIfNotExists();\n      _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('ShadowDom befüllt');\n    }\n  }, {\n    key: \"disconnectedCallback\",\n    value: function disconnectedCallback() {\n      _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('element has been removed');\n    }\n  }, {\n    key: \"attributeChangedCallback\",\n    value: function attributeChangedCallback(name, oldval, newval) {\n      // do something every time the attribute changes\n      _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage(\"the \".concat(name, \" attribute has changed from \").concat(oldval, \" to \").concat(newval, \"!!\"));\n    }\n  }, {\n    key: \"erzeugeShadowDOMIfNotExists\",\n    value: function erzeugeShadowDOMIfNotExists() {\n      if (!this.shadowRoot) {\n        _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('creating shadow dom');\n        this.attachShadow({\n          mode: 'open'\n        });\n      }\n\n      this.shadowRoot.appendChild(template.content.cloneNode(true));\n      var spracheingabe = new _speech_input__WEBPACK_IMPORTED_MODULE_1__[\"Spracheingabe\"](this.shadowRoot, 'eingabefeld');\n      var sprachausgabe = new _speech_output__WEBPACK_IMPORTED_MODULE_2__[\"Sprachausgabe\"](this.shadowRoot, 'eingabefeld'); // onClick auf Micro Button definieren\n\n      this.microphonButton = this.shadowRoot.getElementById('microphon-button');\n      this.microphonButton.addEventListener('click', function () {\n        spracheingabe.erkenneSprachEingabe(function (text) {\n          sprachausgabe.suchkriterienVorlesen(text);\n        });\n      }); // onClick auf Reader Button definieren\n\n      var eingabeFeld = this.shadowRoot.getElementById('eingabefeld');\n      _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('##feld' + eingabeFeld.outerHTML);\n      this.readerButton = this.shadowRoot.getElementById('reader-button');\n      this.readerButton.addEventListener('click', function () {\n        sprachausgabe.suchkriterienVorlesen(eingabeFeld.value);\n      });\n    } // static get observedAttributes() {\n    //     return ['toggled'];\n    // }\n    // get toggled() {\n    //     return this.getAttribute('toggled') === 'true';\n    // }\n    //\n    // // the second argument for setAttribute is mandatory, so we’ll use an empty string\n    // set toggled(val) {\n    //     if (val) {\n    //         this.setAttribute('toggled', true);\n    //     } else {\n    //         this.setAttribute('toggled', false);\n    //     }\n    // }\n\n  }]);\n\n  return LionaSpeechInput;\n}(_wrapNativeSuper(HTMLElement));\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9saW9uYS1zcGVlY2gtaW5wdXQuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9saW9uYS1zcGVlY2gtaW5wdXQuanM/YzFiNiJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG5cbmltcG9ydCB7TG9nZ2VyfSBmcm9tICcuL2xvZy1oZWxwZXInO1xuaW1wb3J0IHtTcHJhY2hlaW5nYWJlfSBmcm9tICcuL3NwZWVjaC1pbnB1dCc7XG5pbXBvcnQge1NwcmFjaGF1c2dhYmV9IGZyb20gJy4vc3BlZWNoLW91dHB1dCc7XG5cbmNvbnN0IHRlbXBsYXRlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgndGVtcGxhdGUnKTtcbnRlbXBsYXRlLmlubmVySFRNTCA9IGBcbiAgICAgPHN0eWxlPlxuICAgICAgICAgXG4gICAgIDwvc3R5bGU+XG4gICAgPGRpdj5cbiAgICAgIDxsYWJlbCBmb3I9XCJlaW5nYWJlZmVsZFwiPlN1Y2hiZWdyaWZmZTo8L2xhYmVsPlxuICAgICAgPGlucHV0IGlkPVwiZWluZ2FiZWZlbGRcIj5cbiAgICAgIDxidXR0b24gaWQ9XCJtaWNyb3Bob24tYnV0dG9uXCI+PGVtPkZyZWllIFNwcmFjaGVpbmdhYmUgc3RhcnRlbiAuLi48L2VtPjwvYnV0dG9uPlxuICAgICAgPGJ1dHRvbiBpZD1cInJlYWRlci1idXR0b25cIj48ZW0+U3VjaGtyaXRlcmllbiB2b3JsZXNlbjwvZW0+PC9idXR0b24+XG4gICAgPC9kaXY+XG5gO1xuXG5cbmNsYXNzIExpb25hU3BlZWNoSW5wdXQgZXh0ZW5kcyBIVE1MRWxlbWVudCB7XG5cbiAgICBjb25zdHJ1Y3RvcigpIHtcbiAgICAgICAgc3VwZXIoKTsgIC8vIGltbWVyIHp1ZXJzdCBhdWZydWZlblxuICAgICAgICAvLyBmb3IgaW5pdCBhdHRyaWJ1dCBkZWZhdWx0c1xuICAgICAgICAvLyBlLmcuIHRoaXMuc3JjID0gJyc7XG4gICAgICAgIExvZ2dlci5sb2dNZXNzYWdlKCdjb25zdHJ1Y3RvciBjYWxsZWQnKTtcbiAgICB9XG5cbiAgICBjb25uZWN0ZWRDYWxsYmFjaygpIHtcbiAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJ2N1c3RvbSBlbGVtZW50IGluIFNlaXRlIGVpbmdlaMOkbmd0Jyk7XG4gICAgICAgIHRoaXMuZXJ6ZXVnZVNoYWRvd0RPTUlmTm90RXhpc3RzKCk7XG4gICAgICAgIExvZ2dlci5sb2dNZXNzYWdlKCdTaGFkb3dEb20gYmVmw7xsbHQnKTtcbiAgICB9XG5cbiAgICBkaXNjb25uZWN0ZWRDYWxsYmFjaygpIHtcbiAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJ2VsZW1lbnQgaGFzIGJlZW4gcmVtb3ZlZCcpO1xuICAgIH1cblxuICAgIGF0dHJpYnV0ZUNoYW5nZWRDYWxsYmFjayhuYW1lLCBvbGR2YWwsIG5ld3ZhbCkge1xuICAgICAgICAvLyBkbyBzb21ldGhpbmcgZXZlcnkgdGltZSB0aGUgYXR0cmlidXRlIGNoYW5nZXNcbiAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoYHRoZSAke25hbWV9IGF0dHJpYnV0ZSBoYXMgY2hhbmdlZCBmcm9tICR7b2xkdmFsfSB0byAke25ld3ZhbH0hIWApO1xuICAgIH1cblxuICAgIGVyemV1Z2VTaGFkb3dET01JZk5vdEV4aXN0cygpIHtcbiAgICAgICAgaWYgKCF0aGlzLnNoYWRvd1Jvb3QpIHtcbiAgICAgICAgICAgIExvZ2dlci5sb2dNZXNzYWdlKCdjcmVhdGluZyBzaGFkb3cgZG9tJyk7XG4gICAgICAgICAgICB0aGlzLmF0dGFjaFNoYWRvdyh7bW9kZTogJ29wZW4nfSk7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5zaGFkb3dSb290LmFwcGVuZENoaWxkKHRlbXBsYXRlLmNvbnRlbnQuY2xvbmVOb2RlKHRydWUpKTtcblxuICAgICAgICBjb25zdCBzcHJhY2hlaW5nYWJlID0gbmV3IFNwcmFjaGVpbmdhYmUodGhpcy5zaGFkb3dSb290LCAnZWluZ2FiZWZlbGQnKTtcbiAgICAgICAgY29uc3Qgc3ByYWNoYXVzZ2FiZSA9IG5ldyBTcHJhY2hhdXNnYWJlKHRoaXMuc2hhZG93Um9vdCwgJ2VpbmdhYmVmZWxkJyk7XG5cbiAgICAgICAgLy8gb25DbGljayBhdWYgTWljcm8gQnV0dG9uIGRlZmluaWVyZW5cbiAgICAgICAgdGhpcy5taWNyb3Bob25CdXR0b24gPSB0aGlzLnNoYWRvd1Jvb3QuZ2V0RWxlbWVudEJ5SWQoJ21pY3JvcGhvbi1idXR0b24nKTtcbiAgICAgICAgdGhpcy5taWNyb3Bob25CdXR0b24uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB7XG4gICAgICAgICAgICBzcHJhY2hlaW5nYWJlLmVya2VubmVTcHJhY2hFaW5nYWJlKCh0ZXh0KSA9PiB7XG4gICAgICAgICAgICAgICAgICAgIHNwcmFjaGF1c2dhYmUuc3VjaGtyaXRlcmllblZvcmxlc2VuKHRleHQpO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICk7XG4gICAgICAgIH0pO1xuICAgICAgICAvLyBvbkNsaWNrIGF1ZiBSZWFkZXIgQnV0dG9uIGRlZmluaWVyZW5cbiAgICAgICAgY29uc3QgZWluZ2FiZUZlbGQgPSB0aGlzLnNoYWRvd1Jvb3QuZ2V0RWxlbWVudEJ5SWQoJ2VpbmdhYmVmZWxkJyk7XG4gICAgICAgIExvZ2dlci5sb2dNZXNzYWdlKCcjI2ZlbGQnICsgZWluZ2FiZUZlbGQub3V0ZXJIVE1MKTtcbiAgICAgICAgdGhpcy5yZWFkZXJCdXR0b24gPSB0aGlzLnNoYWRvd1Jvb3QuZ2V0RWxlbWVudEJ5SWQoJ3JlYWRlci1idXR0b24nKTtcbiAgICAgICAgdGhpcy5yZWFkZXJCdXR0b24uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB7XG4gICAgICAgICAgICBzcHJhY2hhdXNnYWJlLnN1Y2hrcml0ZXJpZW5Wb3JsZXNlbihlaW5nYWJlRmVsZC52YWx1ZSk7XG4gICAgICAgIH0pO1xuICAgIH1cblxuXG4vLyBzdGF0aWMgZ2V0IG9ic2VydmVkQXR0cmlidXRlcygpIHtcbi8vICAgICByZXR1cm4gWyd0b2dnbGVkJ107XG4vLyB9XG5cblxuLy8gZ2V0IHRvZ2dsZWQoKSB7XG4vLyAgICAgcmV0dXJuIHRoaXMuZ2V0QXR0cmlidXRlKCd0b2dnbGVkJykgPT09ICd0cnVlJztcbi8vIH1cbi8vXG4vLyAvLyB0aGUgc2Vjb25kIGFyZ3VtZW50IGZvciBzZXRBdHRyaWJ1dGUgaXMgbWFuZGF0b3J5LCBzbyB3ZeKAmWxsIHVzZSBhbiBlbXB0eSBzdHJpbmdcbi8vIHNldCB0b2dnbGVkKHZhbCkge1xuLy8gICAgIGlmICh2YWwpIHtcbi8vICAgICAgICAgdGhpcy5zZXRBdHRyaWJ1dGUoJ3RvZ2dsZWQnLCB0cnVlKTtcbi8vICAgICB9IGVsc2Uge1xuLy8gICAgICAgICB0aGlzLnNldEF0dHJpYnV0ZSgndG9nZ2xlZCcsIGZhbHNlKTtcbi8vICAgICB9XG4vLyB9XG5cblxufVxuXG5leHBvcnQge0xpb25hU3BlZWNoSW5wdXR9XG5cblxuXG5cbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQVlBOzs7OztBQUVBO0FBQUE7QUFDQTtBQURBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBSkE7QUFLQTtBQUNBOzs7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFFQTtBQUNBO0FBQ0E7OztBQUVBO0FBQ0E7QUFDQTtBQUNBOzs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQUE7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBSUE7QUFDQTtBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7O0FBckVBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./liona-speech-input.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LionaSpeechInput", function() { return LionaSpeechInput; });
+/* harmony import */ var _log_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _speech_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _speech_output__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+
+function isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _construct(Parent, args, Class) { if (isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var template = document.createElement('template');
+template.innerHTML = "\n     <style>\n         \n     </style>\n    <div>\n      <label for=\"eingabefeld\">Suchbegriffe:</label>\n      <input id=\"eingabefeld\">\n      <button id=\"microphon-button\"><em>Freie Spracheingabe starten ...</em></button>\n      <button id=\"reader-button\"><em>Suchkriterien vorlesen</em></button>\n    </div>\n";
+
+var LionaSpeechInput =
+/*#__PURE__*/
+function (_HTMLElement) {
+  _inherits(LionaSpeechInput, _HTMLElement);
+
+  function LionaSpeechInput() {
+    var _this;
+
+    _classCallCheck(this, LionaSpeechInput);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(LionaSpeechInput).call(this)); // immer zuerst aufrufen
+    // for init attribut defaults
+    // e.g. this.src = '';
+
+    _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('constructor called');
+    return _this;
+  }
+
+  _createClass(LionaSpeechInput, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('custom element in Seite eingehängt');
+      this.erzeugeShadowDOMIfNotExists();
+      _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('ShadowDom befüllt');
+    }
+  }, {
+    key: "disconnectedCallback",
+    value: function disconnectedCallback() {
+      _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('element has been removed');
+    }
+  }, {
+    key: "attributeChangedCallback",
+    value: function attributeChangedCallback(name, oldval, newval) {
+      // do something every time the attribute changes
+      _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage("the ".concat(name, " attribute has changed from ").concat(oldval, " to ").concat(newval, "!!"));
+    }
+  }, {
+    key: "erzeugeShadowDOMIfNotExists",
+    value: function erzeugeShadowDOMIfNotExists() {
+      if (!this.shadowRoot) {
+        _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('creating shadow dom');
+        this.attachShadow({
+          mode: 'open'
+        });
+      }
+
+      this.shadowRoot.appendChild(template.content.cloneNode(true));
+      var spracheingabe = new _speech_input__WEBPACK_IMPORTED_MODULE_1__["Spracheingabe"](this.shadowRoot, 'eingabefeld');
+      var sprachausgabe = new _speech_output__WEBPACK_IMPORTED_MODULE_2__["Sprachausgabe"](this.shadowRoot, 'eingabefeld'); // onClick auf Micro Button definieren
+
+      this.microphonButton = this.shadowRoot.getElementById('microphon-button');
+      this.microphonButton.addEventListener('click', function () {
+        spracheingabe.erkenneSprachEingabe(function (text) {
+          sprachausgabe.suchkriterienVorlesen(text);
+        });
+      }); // onClick auf Reader Button definieren
+
+      var eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
+      _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('##feld' + eingabeFeld.outerHTML);
+      this.readerButton = this.shadowRoot.getElementById('reader-button');
+      this.readerButton.addEventListener('click', function () {
+        sprachausgabe.suchkriterienVorlesen(eingabeFeld.value);
+      });
+    } // static get observedAttributes() {
+    //     return ['toggled'];
+    // }
+    // get toggled() {
+    //     return this.getAttribute('toggled') === 'true';
+    // }
+    //
+    // // the second argument for setAttribute is mandatory, so we’ll use an empty string
+    // set toggled(val) {
+    //     if (val) {
+    //         this.setAttribute('toggled', true);
+    //     } else {
+    //         this.setAttribute('toggled', false);
+    //     }
+    // }
+
+  }]);
+
+  return LionaSpeechInput;
+}(_wrapNativeSuper(HTMLElement));
+
+
 
 /***/ }),
-
-/***/ "./log-helper.js":
-/*!***********************!*\
-  !*** ./log-helper.js ***!
-  \***********************/
-/*! exports provided: Logger */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Logger\", function() { return Logger; });\n\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Logger =\n/*#__PURE__*/\nfunction () {\n  function Logger() {\n    _classCallCheck(this, Logger);\n  }\n\n  _createClass(Logger, null, [{\n    key: \"logMessage\",\n    value: function logMessage(message) {\n      console.log(message);\n    }\n  }, {\n    key: \"debugMessage\",\n    value: function debugMessage(message) {\n      console.debug(message);\n    }\n  }, {\n    key: \"errorMessage\",\n    value: function errorMessage(message) {\n      console.error(message);\n    }\n  }, {\n    key: \"infoMessage\",\n    value: function infoMessage(message) {\n      console.info(message);\n    }\n  }]);\n\n  return Logger;\n}();\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9sb2ctaGVscGVyLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbG9nLWhlbHBlci5qcz9mYTg3Il0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcblxuY2xhc3MgTG9nZ2VyIHtcblxuICAgIHN0YXRpYyBsb2dNZXNzYWdlKG1lc3NhZ2UpIHtcbiAgICAgICAgY29uc29sZS5sb2cobWVzc2FnZSk7XG4gICAgfVxuXG4gICAgc3RhdGljIGRlYnVnTWVzc2FnZShtZXNzYWdlKSB7XG4gICAgICAgIGNvbnNvbGUuZGVidWcobWVzc2FnZSk7XG4gICAgfVxuXG4gICAgc3RhdGljIGVycm9yTWVzc2FnZShtZXNzYWdlKSB7XG4gICAgICAgIGNvbnNvbGUuZXJyb3IobWVzc2FnZSk7XG4gICAgfVxuXG4gICAgc3RhdGljIGluZm9NZXNzYWdlKG1lc3NhZ2UpIHtcbiAgICAgICAgY29uc29sZS5pbmZvKG1lc3NhZ2UpO1xuICAgIH1cblxufVxuXG5leHBvcnQge0xvZ2dlcn07XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUNBOzs7Ozs7O0FBQ0E7Ozs7Ozs7OztBQUVBO0FBQ0E7QUFDQTs7O0FBRUE7QUFDQTtBQUNBOzs7QUFFQTtBQUNBO0FBQ0E7OztBQUVBO0FBQ0E7QUFDQTs7Ozs7OyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./log-helper.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Logger", function() { return Logger; });
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Logger =
+/*#__PURE__*/
+function () {
+  function Logger() {
+    _classCallCheck(this, Logger);
+  }
+
+  _createClass(Logger, null, [{
+    key: "logMessage",
+    value: function logMessage(message) {
+      console.log(message);
+    }
+  }, {
+    key: "debugMessage",
+    value: function debugMessage(message) {
+      console.debug(message);
+    }
+  }, {
+    key: "errorMessage",
+    value: function errorMessage(message) {
+      console.error(message);
+    }
+  }, {
+    key: "infoMessage",
+    value: function infoMessage(message) {
+      console.info(message);
+    }
+  }]);
+
+  return Logger;
+}();
+
+
 
 /***/ }),
-
-/***/ "./speech-input.js":
-/*!*************************!*\
-  !*** ./speech-input.js ***!
-  \*************************/
-/*! exports provided: Spracheingabe */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Spracheingabe\", function() { return Spracheingabe; });\n/* harmony import */ var _log_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./log-helper */ \"./log-helper.js\");\n\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\nvar SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;\nvar SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;\nvar SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;\n\nvar Spracheingabe =\n/*#__PURE__*/\nfunction () {\n  function Spracheingabe(shadowRootRef, inputFieldIdRef, wortliste) {\n    _classCallCheck(this, Spracheingabe);\n\n    this.shadowRoot = shadowRootRef;\n    this.eingabeFeldId = inputFieldIdRef;\n    this.words = wortliste;\n    this.recognition = this.initialisiereSpracherkennung();\n    _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('####shadow root:' + this.shadowRoot);\n    _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('####eingabe feld id:' + this.eingabeFeldId);\n  }\n\n  _createClass(Spracheingabe, [{\n    key: \"initialisiereSpracherkennung\",\n    value: function initialisiereSpracherkennung() {\n      // Spracherkennung konfigurieren\n      var sprachErkennung = new SpeechRecognition(); // Grammatik initialisieren\n\n      if (this.words) {\n        var speechRecognitionList = new SpeechGrammarList();\n        var grammar = '#JSGF V1.0; grammar words; public <word> = ' + wortliste + ' ;';\n        speechRecognitionList.addFromString(grammar, 1);\n        sprachErkennung.grammars = speechRecognitionList;\n      }\n\n      sprachErkennung.lang = 'de-DE';\n      sprachErkennung.interimResults = false;\n      SpeechRecognition.continuous = false;\n      sprachErkennung.maxAlternatives = 2;\n      return sprachErkennung;\n    }\n  }, {\n    key: \"erkenneSprachEingabe\",\n    value: function erkenneSprachEingabe(callback) {\n      var _this = this;\n\n      // Spracherkennung starten\n      this.recognition.start();\n      _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('###speaker:' + this.recognition); // Callbacks implementieren\n\n      var eingabeFeld = this.shadowRoot.getElementById(this.eingabeFeldId);\n      _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('####bevor this.eingabefeld:' + eingabeFeld.outerHTML);\n\n      this.recognition.onresult = function (event) {\n        _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('####eingabefeld:' + eingabeFeld.outerHTML);\n        var speechResult = event.results[0][0].transcript;\n        eingabeFeld.value = speechResult;\n        _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('####eingabefeld changed:' + eingabeFeld.outerHTML);\n        _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('Confidence: ' + event.results[0][0].confidence);\n        callback(speechResult);\n      };\n\n      this.recognition.onnomatch = function () {\n        callback('Ihre Sprache wurde nicht erkannt');\n      };\n\n      this.recognition.onspeechend = function () {\n        _this.recognition.stop();\n      };\n    }\n  }]);\n\n  return Spracheingabe;\n}();\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcGVlY2gtaW5wdXQuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcGVlY2gtaW5wdXQuanM/YmRjYyJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG5cbmltcG9ydCB7TG9nZ2VyfSBmcm9tICcuL2xvZy1oZWxwZXInXG5cbmNvbnN0IFNwZWVjaFJlY29nbml0aW9uID0gU3BlZWNoUmVjb2duaXRpb24gfHwgd2Via2l0U3BlZWNoUmVjb2duaXRpb25cbmNvbnN0IFNwZWVjaEdyYW1tYXJMaXN0ID0gU3BlZWNoR3JhbW1hckxpc3QgfHwgd2Via2l0U3BlZWNoR3JhbW1hckxpc3RcbmNvbnN0IFNwZWVjaFJlY29nbml0aW9uRXZlbnQgPSBTcGVlY2hSZWNvZ25pdGlvbkV2ZW50IHx8IHdlYmtpdFNwZWVjaFJlY29nbml0aW9uRXZlbnRcblxuY2xhc3MgU3ByYWNoZWluZ2FiZSB7XG5cbiAgICBjb25zdHJ1Y3RvcihzaGFkb3dSb290UmVmLCBpbnB1dEZpZWxkSWRSZWYsIHdvcnRsaXN0ZSkge1xuICAgICAgICB0aGlzLnNoYWRvd1Jvb3QgPSBzaGFkb3dSb290UmVmO1xuICAgICAgICB0aGlzLmVpbmdhYmVGZWxkSWQgPSBpbnB1dEZpZWxkSWRSZWY7XG4gICAgICAgIHRoaXMud29yZHMgPSB3b3J0bGlzdGU7XG4gICAgICAgIHRoaXMucmVjb2duaXRpb24gPSB0aGlzLmluaXRpYWxpc2llcmVTcHJhY2hlcmtlbm51bmcoKTtcbiAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJyMjIyNzaGFkb3cgcm9vdDonICsgdGhpcy5zaGFkb3dSb290KTtcbiAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJyMjIyNlaW5nYWJlIGZlbGQgaWQ6JyArIHRoaXMuZWluZ2FiZUZlbGRJZCk7XG5cbiAgICB9XG5cbiAgICBpbml0aWFsaXNpZXJlU3ByYWNoZXJrZW5udW5nKCkge1xuICAgICAgICAvLyBTcHJhY2hlcmtlbm51bmcga29uZmlndXJpZXJlblxuICAgICAgICBjb25zdCBzcHJhY2hFcmtlbm51bmcgPSBuZXcgU3BlZWNoUmVjb2duaXRpb24oKTtcbiAgICAgICAgLy8gR3JhbW1hdGlrIGluaXRpYWxpc2llcmVuXG4gICAgICAgIGlmICh0aGlzLndvcmRzKSB7XG4gICAgICAgICAgICBjb25zdCBzcGVlY2hSZWNvZ25pdGlvbkxpc3QgPSBuZXcgU3BlZWNoR3JhbW1hckxpc3QoKTtcbiAgICAgICAgICAgIGNvbnN0IGdyYW1tYXIgPSAnI0pTR0YgVjEuMDsgZ3JhbW1hciB3b3JkczsgcHVibGljIDx3b3JkPiA9ICcgKyB3b3J0bGlzdGUgKycgOyc7XG4gICAgICAgICAgICBzcGVlY2hSZWNvZ25pdGlvbkxpc3QuYWRkRnJvbVN0cmluZyhncmFtbWFyLCAxKTtcbiAgICAgICAgICAgIHNwcmFjaEVya2VubnVuZy5ncmFtbWFycyA9IHNwZWVjaFJlY29nbml0aW9uTGlzdDtcbiAgICAgICAgfVxuICAgICAgICBzcHJhY2hFcmtlbm51bmcubGFuZyA9ICdkZS1ERSc7XG4gICAgICAgIHNwcmFjaEVya2VubnVuZy5pbnRlcmltUmVzdWx0cyA9IGZhbHNlO1xuICAgICAgICBTcGVlY2hSZWNvZ25pdGlvbi5jb250aW51b3VzID0gZmFsc2U7XG4gICAgICAgIHNwcmFjaEVya2VubnVuZy5tYXhBbHRlcm5hdGl2ZXMgPSAyO1xuXG4gICAgICAgIHJldHVybiBzcHJhY2hFcmtlbm51bmc7XG4gICAgfVxuXG4gICAgZXJrZW5uZVNwcmFjaEVpbmdhYmUoY2FsbGJhY2spIHtcbiAgICAgICAgLy8gU3ByYWNoZXJrZW5udW5nIHN0YXJ0ZW5cbiAgICAgICAgdGhpcy5yZWNvZ25pdGlvbi5zdGFydCgpO1xuICAgICAgICBMb2dnZXIubG9nTWVzc2FnZSgnIyMjc3BlYWtlcjonICsgdGhpcy5yZWNvZ25pdGlvbik7XG5cbiAgICAgICAgLy8gQ2FsbGJhY2tzIGltcGxlbWVudGllcmVuXG4gICAgICAgIGNvbnN0IGVpbmdhYmVGZWxkID0gdGhpcy5zaGFkb3dSb290LmdldEVsZW1lbnRCeUlkKHRoaXMuZWluZ2FiZUZlbGRJZCk7XG4gICAgICAgIExvZ2dlci5sb2dNZXNzYWdlKCcjIyMjYmV2b3IgdGhpcy5laW5nYWJlZmVsZDonICsgZWluZ2FiZUZlbGQub3V0ZXJIVE1MKTtcbiAgICAgICAgdGhpcy5yZWNvZ25pdGlvbi5vbnJlc3VsdCA9IChldmVudCkgPT4ge1xuICAgICAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJyMjIyNlaW5nYWJlZmVsZDonICsgZWluZ2FiZUZlbGQub3V0ZXJIVE1MKTtcbiAgICAgICAgICAgIGNvbnN0IHNwZWVjaFJlc3VsdCA9IGV2ZW50LnJlc3VsdHNbMF1bMF0udHJhbnNjcmlwdDtcbiAgICAgICAgICAgIGVpbmdhYmVGZWxkLnZhbHVlID0gc3BlZWNoUmVzdWx0O1xuICAgICAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJyMjIyNlaW5nYWJlZmVsZCBjaGFuZ2VkOicgKyBlaW5nYWJlRmVsZC5vdXRlckhUTUwpO1xuICAgICAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJ0NvbmZpZGVuY2U6ICcgKyBldmVudC5yZXN1bHRzWzBdWzBdLmNvbmZpZGVuY2UpO1xuICAgICAgICAgICAgY2FsbGJhY2soc3BlZWNoUmVzdWx0KTtcbiAgICAgICAgfTtcblxuICAgICAgICB0aGlzLnJlY29nbml0aW9uLm9ubm9tYXRjaCA9ICgpID0+IHtcbiAgICAgICAgICAgIGNhbGxiYWNrKCdJaHJlIFNwcmFjaGUgd3VyZGUgbmljaHQgZXJrYW5udCcpO1xuICAgICAgICB9XG5cbiAgICAgICAgdGhpcy5yZWNvZ25pdGlvbi5vbnNwZWVjaGVuZCA9ICgpID0+IHtcbiAgICAgICAgICAgIHRoaXMucmVjb2duaXRpb24uc3RvcCgpO1xuICAgICAgICB9XG5cblxuICAgIH1cblxufVxuXG5leHBvcnQge1NwcmFjaGVpbmdhYmV9O1xuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBOzs7Ozs7O0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFFQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBOzs7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBOzs7QUFFQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBR0E7Ozs7OzsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./speech-input.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Spracheingabe", function() { return Spracheingabe; });
+/* harmony import */ var _log_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+
+var Spracheingabe =
+/*#__PURE__*/
+function () {
+  function Spracheingabe(shadowRootRef, inputFieldIdRef, wortliste) {
+    _classCallCheck(this, Spracheingabe);
+
+    this.shadowRoot = shadowRootRef;
+    this.eingabeFeldId = inputFieldIdRef;
+    this.words = wortliste;
+    this.recognition = this.initialisiereSpracherkennung();
+    _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('####shadow root:' + this.shadowRoot);
+    _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('####eingabe feld id:' + this.eingabeFeldId);
+  }
+
+  _createClass(Spracheingabe, [{
+    key: "initialisiereSpracherkennung",
+    value: function initialisiereSpracherkennung() {
+      // Spracherkennung konfigurieren
+      var sprachErkennung = new SpeechRecognition(); // Grammatik initialisieren
+
+      if (this.words) {
+        var speechRecognitionList = new SpeechGrammarList();
+        var grammar = '#JSGF V1.0; grammar words; public <word> = ' + wortliste + ' ;';
+        speechRecognitionList.addFromString(grammar, 1);
+        sprachErkennung.grammars = speechRecognitionList;
+      }
+
+      sprachErkennung.lang = 'de-DE';
+      sprachErkennung.interimResults = false;
+      SpeechRecognition.continuous = false;
+      sprachErkennung.maxAlternatives = 2;
+      return sprachErkennung;
+    }
+  }, {
+    key: "erkenneSprachEingabe",
+    value: function erkenneSprachEingabe(callback) {
+      var _this = this;
+
+      // Spracherkennung starten
+      this.recognition.start();
+      _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('###speaker:' + this.recognition); // Callbacks implementieren
+
+      var eingabeFeld = this.shadowRoot.getElementById(this.eingabeFeldId);
+      _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('####bevor this.eingabefeld:' + eingabeFeld.outerHTML);
+
+      this.recognition.onresult = function (event) {
+        _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('####eingabefeld:' + eingabeFeld.outerHTML);
+        var speechResult = event.results[0][0].transcript;
+        eingabeFeld.value = speechResult;
+        _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('####eingabefeld changed:' + eingabeFeld.outerHTML);
+        _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('Confidence: ' + event.results[0][0].confidence);
+        callback(speechResult);
+      };
+
+      this.recognition.onnomatch = function () {
+        callback('Ihre Sprache wurde nicht erkannt');
+      };
+
+      this.recognition.onspeechend = function () {
+        _this.recognition.stop();
+      };
+    }
+  }]);
+
+  return Spracheingabe;
+}();
+
+
 
 /***/ }),
-
-/***/ "./speech-output.js":
-/*!**************************!*\
-  !*** ./speech-output.js ***!
-  \**************************/
-/*! exports provided: Sprachausgabe */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Sprachausgabe\", function() { return Sprachausgabe; });\n/* harmony import */ var _log_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./log-helper */ \"./log-helper.js\");\n\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\nvar Sprachausgabe =\n/*#__PURE__*/\nfunction () {\n  function Sprachausgabe() {\n    _classCallCheck(this, Sprachausgabe);\n\n    this.sprachSynthese = window.speechSynthesis;\n    _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('####constructor called');\n  }\n\n  _createClass(Sprachausgabe, [{\n    key: \"suchkriterienVorlesen\",\n    value: function suchkriterienVorlesen(zuLesenderText) {\n      if (this.sprachSynthese.speaking) {\n        _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('Spricht bereits');\n        return;\n      }\n\n      if (zuLesenderText !== '') {\n        var vorleseText = 'Ihre Eingaben zur Kontrolle: ' + zuLesenderText;\n        _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage(\"Text:\" + vorleseText);\n        var leserStimmeMitText = new SpeechSynthesisUtterance(vorleseText);\n\n        leserStimmeMitText.onend = function () {\n          return event;\n        };\n\n        {\n          _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('Vorlesen beendet');\n        }\n\n        leserStimmeMitText.onerror = function () {\n          return event;\n        };\n\n        {\n          _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage('Fehler beim Vorlesen');\n        }\n        var voices = this.sprachSynthese.getVoices();\n\n        for (var i = 0; i < voices.length; i++) {\n          if (voices[i][\"default\"]) {\n            _log_helper__WEBPACK_IMPORTED_MODULE_0__[\"Logger\"].logMessage(\"Voice:\" + voices[i].name + voices[i].lang);\n            leserStimmeMitText.voice = voices[i];\n            break;\n          }\n        }\n\n        leserStimmeMitText.pitch = 1;\n        leserStimmeMitText.rate = 1;\n        leserStimmeMitText.volume = 1;\n        this.sprachSynthese.speak(leserStimmeMitText);\n      }\n    }\n  }]);\n\n  return Sprachausgabe;\n}();\n\n;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcGVlY2gtb3V0cHV0LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3BlZWNoLW91dHB1dC5qcz85YmE4Il0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcblxuaW1wb3J0IHtMb2dnZXJ9IGZyb20gJy4vbG9nLWhlbHBlcic7XG5cbmNsYXNzIFNwcmFjaGF1c2dhYmUge1xuXG4gICAgY29uc3RydWN0b3IoKSB7XG4gICAgICAgIHRoaXMuc3ByYWNoU3ludGhlc2UgPSB3aW5kb3cuc3BlZWNoU3ludGhlc2lzO1xuICAgICAgICBMb2dnZXIubG9nTWVzc2FnZSgnIyMjI2NvbnN0cnVjdG9yIGNhbGxlZCcpO1xuICAgIH1cblxuICAgIHN1Y2hrcml0ZXJpZW5Wb3JsZXNlbih6dUxlc2VuZGVyVGV4dCkge1xuICAgICAgICBpZiAodGhpcy5zcHJhY2hTeW50aGVzZS5zcGVha2luZykge1xuICAgICAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoJ1NwcmljaHQgYmVyZWl0cycpO1xuICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICB9XG4gICAgICAgIGlmICh6dUxlc2VuZGVyVGV4dCAhPT0gJycpIHtcbiAgICAgICAgICAgIHZhciB2b3JsZXNlVGV4dCA9ICdJaHJlIEVpbmdhYmVuIHp1ciBLb250cm9sbGU6ICcgKyB6dUxlc2VuZGVyVGV4dDtcbiAgICAgICAgICAgIExvZ2dlci5sb2dNZXNzYWdlKFwiVGV4dDpcIiArIHZvcmxlc2VUZXh0KTtcbiAgICAgICAgICAgIHZhciBsZXNlclN0aW1tZU1pdFRleHQgPSBuZXcgU3BlZWNoU3ludGhlc2lzVXR0ZXJhbmNlKHZvcmxlc2VUZXh0KTtcblxuICAgICAgICAgICAgbGVzZXJTdGltbWVNaXRUZXh0Lm9uZW5kID0gKCkgPT4gKGV2ZW50KVxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIExvZ2dlci5sb2dNZXNzYWdlKCdWb3JsZXNlbiBiZWVuZGV0Jyk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBsZXNlclN0aW1tZU1pdFRleHQub25lcnJvciA9ICgpID0+IChldmVudClcbiAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBMb2dnZXIubG9nTWVzc2FnZSgnRmVobGVyIGJlaW0gVm9ybGVzZW4nKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHZhciB2b2ljZXMgPSB0aGlzLnNwcmFjaFN5bnRoZXNlLmdldFZvaWNlcygpO1xuICAgICAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCB2b2ljZXMubGVuZ3RoOyBpKyspIHtcbiAgICAgICAgICAgICAgICBpZiAodm9pY2VzW2ldLmRlZmF1bHQpIHtcbiAgICAgICAgICAgICAgICAgICAgTG9nZ2VyLmxvZ01lc3NhZ2UoXCJWb2ljZTpcIiArIHZvaWNlc1tpXS5uYW1lICsgdm9pY2VzW2ldLmxhbmcpO1xuICAgICAgICAgICAgICAgICAgICBsZXNlclN0aW1tZU1pdFRleHQudm9pY2UgPSB2b2ljZXNbaV07XG4gICAgICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGxlc2VyU3RpbW1lTWl0VGV4dC5waXRjaCA9IDE7XG4gICAgICAgICAgICBsZXNlclN0aW1tZU1pdFRleHQucmF0ZSA9IDE7XG4gICAgICAgICAgICBsZXNlclN0aW1tZU1pdFRleHQudm9sdW1lID0gMTtcbiAgICAgICAgICAgIHRoaXMuc3ByYWNoU3ludGhlc2Uuc3BlYWsobGVzZXJTdGltbWVNaXRUZXh0KTtcbiAgICAgICAgfVxuICAgIH1cblxufTtcblxuXG5leHBvcnQge1NwcmFjaGF1c2dhYmV9O1xuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBOzs7Ozs7O0FBQ0E7QUFDQTtBQUNBOzs7QUFFQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTs7O0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7Ozs7QUFFQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./speech-output.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sprachausgabe", function() { return Sprachausgabe; });
+/* harmony import */ var _log_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var Sprachausgabe =
+/*#__PURE__*/
+function () {
+  function Sprachausgabe() {
+    _classCallCheck(this, Sprachausgabe);
+
+    this.sprachSynthese = window.speechSynthesis;
+    _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('####constructor called');
+  }
+
+  _createClass(Sprachausgabe, [{
+    key: "suchkriterienVorlesen",
+    value: function suchkriterienVorlesen(zuLesenderText) {
+      if (this.sprachSynthese.speaking) {
+        _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('Spricht bereits');
+        return;
+      }
+
+      if (zuLesenderText !== '') {
+        var vorleseText = 'Ihre Eingaben zur Kontrolle: ' + zuLesenderText;
+        _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage("Text:" + vorleseText);
+        var leserStimmeMitText = new SpeechSynthesisUtterance(vorleseText);
+
+        leserStimmeMitText.onend = function () {
+          return event;
+        };
+
+        {
+          _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('Vorlesen beendet');
+        }
+
+        leserStimmeMitText.onerror = function () {
+          return event;
+        };
+
+        {
+          _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage('Fehler beim Vorlesen');
+        }
+        var voices = this.sprachSynthese.getVoices();
+
+        for (var i = 0; i < voices.length; i++) {
+          if (voices[i]["default"]) {
+            _log_helper__WEBPACK_IMPORTED_MODULE_0__["Logger"].logMessage("Voice:" + voices[i].name + voices[i].lang);
+            leserStimmeMitText.voice = voices[i];
+            break;
+          }
+        }
+
+        leserStimmeMitText.pitch = 1;
+        leserStimmeMitText.rate = 1;
+        leserStimmeMitText.volume = 1;
+        this.sprachSynthese.speak(leserStimmeMitText);
+      }
+    }
+  }]);
+
+  return Sprachausgabe;
+}();
+
+
 
 /***/ })
-
-/******/ });
+/******/ ]);
