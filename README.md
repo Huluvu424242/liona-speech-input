@@ -6,7 +6,7 @@ Die Webkomponente realisiert ein input tag mit Button zur Sprachein- und ausgabe
 
 ## Installation
 
-npm install --save-dev liona-speech-input
+npm install --save liona-speech-input
 
 ## Verwendung
 
@@ -15,7 +15,7 @@ npm install --save-dev liona-speech-input
     window.customElements.define('liona-speech-input', LionaSpeechInput);
 </script>
 ```
-Zur [Demo Seite](https://funthomas424242.github.io/liona/)
+Zur [Demo Seite](https://funthomas424242.github.io/liona/index.html)
 
 ## Demo
 
