@@ -1,8 +1,8 @@
 {
   "name": "liona-speech-input",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Web Component for speech input field",
-  "homepage": "https://github.com/FunThomas424242/liona-speech-input",
+  "homepage": "https://funthomas424242.github.io/liona-speech-input/",
   "main": "dist/index.bundle.js",
   "engines": {
     "node": "10.15.3"
