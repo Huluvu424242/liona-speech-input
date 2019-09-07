@@ -11,7 +11,7 @@ npm install --save liona-speech-input
 ## Verwendung
 
 ```html
-<script type="module" src="node_modules/liona-speech-input/docs/bundle.js">
+<script type="module" src="node_modules/liona-speech-input/dist/index.bundle.js">
     window.customElements.define('liona-speech-input', LionaSpeechInput);
 </script>
 ```

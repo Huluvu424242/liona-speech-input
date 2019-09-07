@@ -4,8 +4,8 @@ module.exports = {
   mode: "none",
   entry: './src/app.js',
   output: {
-    path: path.resolve(__dirname, 'docs'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.bundle.js'
   },
   module: {
     rules: [
