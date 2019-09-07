@@ -42,7 +42,6 @@ class Sprachausgabe {
         }
     }
 
-};
-
+}
 
 export {Sprachausgabe};
