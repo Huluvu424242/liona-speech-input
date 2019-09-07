@@ -2,9 +2,9 @@
 
 import {Logger} from './log-helper'
 
-const SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-const SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-const SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+const SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList
+const SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent
 
 class Spracheingabe {
 
