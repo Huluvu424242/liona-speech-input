@@ -20,18 +20,20 @@ class Spracheingabe {
 
     initialisiereSpracherkennung() {
         // Spracherkennung konfigurieren
-        const speechRecognition = new SpeechRecognition();
-        speechRecognition.lang = 'de-DE';
-        speechRecognition.interimResults = false;
-        speechRecognition.maxAlternatives = 1;
+        const sprachErkennung = new SpeechRecognition();
         // Grammatik initialisieren
         if (this.words) {
             const speechRecognitionList = new SpeechGrammarList();
             const grammar = '#JSGF V1.0; grammar words; public <word> = ' + this.words.join(' | ') + ' ;';
             speechRecognitionList.addFromString(grammar, 1);
-            speechRecognition.grammars = speechRecognitionList;
+            sprachErkennung.grammars = speechRecognitionList;
         }
-        return speechRecognition;
+        sprachErkennung.lang = 'de-DE';
+        sprachErkennung.interimResults = false;
+        SpeechRecognition.continuous = false;
+        sprachErkennung.maxAlternatives = 1;
+
+        return sprachErkennung;
     }
 
     erkenneSprachEingabe(callback) {
@@ -50,6 +52,10 @@ class Spracheingabe {
             Logger.logMessage('Confidence: ' + event.results[0][0].confidence);
             callback(speechResult);
         };
+
+        this.recognition.onnomatch = () => {
+            callback('Ihre Sprache wurde nicht erkannt');
+        }
 
         this.recognition.onspeechend = () => {
             this.recognition.stop();
