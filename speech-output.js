@@ -1,36 +1,36 @@
 'use strict';
 
-var synthese = window.speechSynthesis;
+import {Logger} from './log-helper';
 
 class Sprachausgabe {
 
-    constructor(eingabeFeldRef) {
-        this.eingabeFeld = eingabeFeldRef;
-        this.logMessage('####ausgabe feld:'+this.eingabeFeld.outerHTML);
+    constructor() {
+        this.sprachSynthese = window.speechSynthesis;
+        Logger.logMessage('####constructor called');
     }
 
-    suchkriterienVorlesen() {
-        if (synthese.speaking) {
-            this.logMessage('Spricht bereits');
+    suchkriterienVorlesen(zuLesenderText) {
+        if (this.sprachSynthese.speaking) {
+            Logger.logMessage('Spricht bereits');
             return;
         }
-        var zuLesenderText = this.eingabeFeld.value;
-        this.logMessage('###'+this.eingabeFeld.value);
         if (zuLesenderText !== '') {
             var vorleseText = 'Ihre Eingaben zur Kontrolle: ' + zuLesenderText;
-            this.logMessage("Text:" + vorleseText);
+            Logger.logMessage("Text:" + vorleseText);
             var leserStimmeMitText = new SpeechSynthesisUtterance(vorleseText);
-            var objekt = this;
-            leserStimmeMitText.onend = function (event) {
-                objekt.logMessage('Vorlesen beendet');
+
+            leserStimmeMitText.onend = () => (event)
+            {
+                Logger.logMessage('Vorlesen beendet');
             }
-            leserStimmeMitText.onerror = function (event) {
-                objekt.logMessage('Fehler beim Vorlesen');
+            leserStimmeMitText.onerror = () => (event)
+            {
+                Logger.logMessage('Fehler beim Vorlesen');
             }
-            var voices = synthese.getVoices();
+            var voices = this.sprachSynthese.getVoices();
             for (var i = 0; i < voices.length; i++) {
                 if (voices[i].default) {
-                    this.logMessage("Voice:" + voices[i].name + voices[i].lang);
+                    Logger.logMessage("Voice:" + voices[i].name + voices[i].lang);
                     leserStimmeMitText.voice = voices[i];
                     break;
                 }
@@ -38,13 +38,10 @@ class Sprachausgabe {
             leserStimmeMitText.pitch = 1;
             leserStimmeMitText.rate = 1;
             leserStimmeMitText.volume = 1;
-            synthese.speak(leserStimmeMitText);
+            this.sprachSynthese.speak(leserStimmeMitText);
         }
     }
 
-    logMessage(message) {
-        console.log(message);
-    }
 };
 
 

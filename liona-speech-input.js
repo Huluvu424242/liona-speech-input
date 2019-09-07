@@ -49,10 +49,8 @@ class LionaSpeechInput extends HTMLElement {
         }
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-        const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
-        Logger.logMessage('##feld' + eingabeFeld.outerHTML);
         const spracheingabe = new Spracheingabe(this.shadowRoot, 'eingabefeld');
-        const sprachausgabe = new Sprachausgabe(eingabeFeld);
+        const sprachausgabe = new Sprachausgabe(this.shadowRoot, 'eingabefeld');
 
         // onClick auf Micro Button definieren
         this.microphonButton = this.shadowRoot.getElementById('microphon-button');
@@ -63,9 +61,11 @@ class LionaSpeechInput extends HTMLElement {
             );
         });
         // onClick auf Reader Button definieren
+        const eingabeFeld = this.shadowRoot.getElementById('eingabefeld');
+        Logger.logMessage('##feld' + eingabeFeld.outerHTML);
         this.readerButton = this.shadowRoot.getElementById('reader-button');
         this.readerButton.addEventListener('click', () => {
-            sprachausgabe.suchkriterienVorlesen();
+            sprachausgabe.suchkriterienVorlesen(eingabeFeld.value);
         });
     }
 
