@@ -12,6 +12,23 @@ TODO: Describe the installation process
 
 TODO: Write usage instructions
 
+## Demo
+
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="docs/index.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<liona-speech-input></liona-speech-input>
+```
+
+
 ## Mitarbeit
 
 1. Fork it!
