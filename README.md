@@ -22,7 +22,13 @@ TODO: Write usage instructions
 
 ## Releaselog
 
-Initiales Projektsetup basierend auf https://github.com/FunThomas424242/webspeech.example
+### v0.0.2
+
+* Homepage gesetzt
+
+### v0.0.1
+
+* Initiales Projektsetup basierend auf https://github.com/FunThomas424242/webspeech.example
 
 ## Quellen
 
