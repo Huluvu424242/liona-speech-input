@@ -8,7 +8,7 @@
     "start": "concurrently \"npm run start-watch\" \"npm run start-server\" ",
     "start-watch": "webpack -d --watch",
     "start-server": "webpack-dev-server",
-    "build": "npm run clean && webpack",
+    "build": "npm run clean && webpack --production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preversion": "npm run build && git add dist",
     "postversion": "git push && git push --tags"
