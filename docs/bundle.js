@@ -92,7 +92,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _liona_speech_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 
-customElements.define('liona-speech-input', _liona_speech_input__WEBPACK_IMPORTED_MODULE_0__["LionaSpeechInput"]);
+window.customElements.define('liona-speech-input', _liona_speech_input__WEBPACK_IMPORTED_MODULE_0__["LionaSpeechInput"]);
 
 /***/ }),
 /* 1 */
