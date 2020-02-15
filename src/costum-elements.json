@@ -1,0 +1,21 @@
+{
+  "version": "0.0.5",
+  "tags": [
+    {
+      "name": "liona-speech-input",
+      "description": "Eine Demokomponente zur Spracheingabe",
+      "properties": [
+
+      ],
+      "events": [
+
+      ],
+      "slots": [
+
+      ],
+      "cssProperties": [
+
+      ]
+    }
+  ]
+}
